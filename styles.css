@@ -498,3 +498,28 @@ footer span {
     font-size: 20px;
   }
 }
+/* =========================
+   MINISTRY TEACHINGS
+========================= */
+
+.ministry-teaching {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e9ef;
+  text-align: left;
+}
+
+.ministry-teaching h4 {
+  margin: 0 0 8px;
+  color: #c79a24;
+  font-size: 16px;
+}
+
+.ministry-teaching p {
+  font-size: 14px;
+  color: #536273;
+}
+
+.ministry-teaching strong {
+  color: #102d52;
+  }
