@@ -1,1 +1,500 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,sans-serif;color:#102d52;line-height:1.65}.top{background:#071f3d;color:#fff;padding:9px 6%;font-size:14px}.top a{color:#fff}.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 6%;position:sticky;top:0;background:#fff;z-index:5;box-shadow:0 2px 12px #0002}.brand img{width:235px;height:68px;object-fit:cover;object-position:center;border-radius:4px}.nav nav{display:flex;gap:22px}.nav nav a{color:#092b52;text-decoration:none;font-weight:700}.menu{display:none;border:0;background:none;font-size:28px}.hero{min-height:550px;padding:90px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#031a35ec,#031a3540),url("power-of-worship-church-logo.jpg") center/cover}.hero>div{max-width:650px;color:#fff}.gold{color:#d89d12;font-weight:800;letter-spacing:2px}.hero h1{font:700 58px/1.05 Georgia,serif}.hero h1 span{color:#efb300}.hero h2{font:italic 27px Georgia,serif}.btn{display:inline-block;margin:12px 8px 0 0;padding:12px 21px;background:#efb300;color:#08264a;border-radius:7px;text-decoration:none;font-weight:800}.btn.alt{background:transparent;color:#fff;border:2px solid #fff}.services,.section{padding:60px 6%}.services{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:20px}.card{background:#fff;border-radius:10px;padding:22px;box-shadow:0 4px 18px #08264a14}.card b{font-size:30px}.about{display:grid;grid-template-columns:1.4fr 1fr;gap:50px}.vision{border-left:3px solid #e5aa00;padding-left:28px}.light{background:#f3f8fc}.center{text-align:center}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:25px}.grid .card{text-align:center}.columns{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:30px}.columns li{margin:12px 0}.give{text-align:center;padding:60px 6%;background:#08264a;color:#fff}.mpesa{font-size:32px;font-weight:900;color:#efb300;margin:10px}.contact{display:grid;grid-template-columns:2fr 1fr;gap:50px}.contact a{color:#075e9d}footer{background:#061b33;color:#fff;padding:25px 6%;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}@media(max-width:900px){.nav nav{display:none;position:absolute;top:92px;left:0;right:0;background:#fff;padding:20px 6%;flex-direction:column}.nav nav.show{display:flex}.menu{display:block}.services,.about,.columns,.contact{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:43px}}@media(max-width:520px){.grid{grid-template-columns:1fr}.brand img{width:190px;height:58px}.hero{padding:60px 6%}.hero h1{font-size:36px}.services{padding:45px 6%}}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172f4d;
+  background: #ffffff;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   TOP CONTACT BAR
+========================= */
+
+.top {
+  background: #071f3d;
+  color: #ffffff;
+  padding: 9px 6%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.top a {
+  color: #f4c542;
+  font-weight: 700;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  min-height: 78px;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brand img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #102d52;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #c79a24;
+}
+
+.menu {
+  display: none;
+  border: none;
+  background: #071f3d;
+  color: white;
+  font-size: 25px;
+  padding: 7px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 620px;
+  padding: 100px 7%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4,25,50,0.96) 0%,
+      rgba(4,25,50,0.82) 48%,
+      rgba(4,25,50,0.42) 100%
+    ),
+    url("power-of-worship-church-logo.jpg") center/cover no-repeat;
+  color: #ffffff;
+}
+
+.hero > div {
+  max-width: 720px;
+}
+
+.gold {
+  color: #e4b83d;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  margin: 10px 0;
+  font-size: clamp(42px, 7vw, 76px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #e4b83d;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: 500;
+  margin: 22px 0 15px;
+}
+
+.hero p:not(.gold) {
+  max-width: 650px;
+  font-size: 17px;
+  color: #f2f5f8;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-block;
+  margin: 18px 8px 0 0;
+  padding: 13px 24px;
+  border-radius: 30px;
+  background: #d5a72d;
+  color: #071f3d;
+  font-weight: 800;
+  transition: 0.3s ease;
+  border: 2px solid #d5a72d;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #f0c64f;
+}
+
+.btn.alt {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.btn.alt:hover {
+  background: #ffffff;
+  color: #071f3d;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  max-width: 1200px;
+  margin: auto;
+  padding: 75px 6%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.services > div:first-child {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.services h2,
+.section h2,
+.give h2 {
+  margin-top: 5px;
+  font-size: clamp(30px, 4vw, 42px);
+  color: #102d52;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px 22px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(7,31,61,0.09);
+  border: 1px solid #edf0f4;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 14px 30px rgba(7,31,61,0.15);
+}
+
+.card b {
+  display: block;
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.card h3 {
+  color: #102d52;
+  margin: 8px 0;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+  padding: 85px 7%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.light {
+  max-width: none;
+  background: #f7f9fc;
+}
+
+.light > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about p {
+  color: #536273;
+}
+
+.vision {
+  background: #071f3d;
+  color: #ffffff;
+  padding: 38px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(7,31,61,0.15);
+}
+
+.vision h3 {
+  color: #e4b83d;
+}
+
+.vision p {
+  color: #ffffff;
+}
+
+/* =========================
+   MINISTRIES
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* =========================
+   EVENTS / SERMONS / PRAYER
+========================= */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.columns > div {
+  background: #f7f9fc;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.columns ul {
+  padding-left: 20px;
+}
+
+.columns li {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   GIVING
+========================= */
+
+.give {
+  padding: 85px 7%;
+  text-align: center;
+  background:
+    linear-gradient(
+      rgba(7,31,61,0.96),
+      rgba(7,31,61,0.96)
+    );
+  color: #ffffff;
+}
+
+.give h2 {
+  color: #ffffff;
+}
+
+.give .gold {
+  color: #e4b83d;
+}
+
+.mpesa {
+  display: inline-block;
+  margin: 15px 0;
+  padding: 16px 30px;
+  background: #ffffff;
+  color: #071f3d;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact a:not(.btn) {
+  color: #0b63ce;
+  font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  background: #04172d;
+  color: #ffffff;
+  padding: 45px 6%;
+  text-align: center;
+}
+
+footer strong {
+  display: block;
+  color: #e4b83d;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+footer span {
+  display: block;
+  margin: 5px 0;
+  color: #d5dce5;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+  .nav {
+    min-height: 70px;
+  }
+
+  .brand img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    padding: 18px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 600px;
+    padding: 80px 7%;
+  }
+
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about,
+  .columns,
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .top {
+    font-size: 12px;
+    padding: 8px 4%;
+  }
+
+  .hero {
+    min-height: 620px;
+    padding: 70px 6%;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero h2 {
+    font-size: 21px;
+  }
+
+  .hero p:not(.gold) {
+    font-size: 15px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    padding: 60px 6%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 65px 6%;
+  }
+
+  .give {
+    padding: 65px 6%;
+  }
+
+  .mpesa {
+    font-size: 20px;
+  }
+}
